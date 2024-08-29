@@ -11,6 +11,15 @@ body {
   color: black;
   text-align: center;
   background-color: white;
+
+  display: grid;
+  grid-template-areas:
+    "aside section"
+    "aside main"
+    "aside footer";
+  grid-template-columns: 20rem 1fr;
+  grid-template-rows: 35rem 1fr auto;
+  min-height: 100vh;
 }
 
 img {
@@ -49,3 +58,21 @@ a {
 }
 
 /* ----------------------------------------------------- */
+
+section {
+  grid-area: section;
+  background-color: rosybrown;
+}
+
+aside {
+  background-color: grey;
+  grid-area: aside;
+}
+
+main {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
+}
