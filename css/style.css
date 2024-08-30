@@ -1,6 +1,7 @@
 :root {
   --menu-grey: #484f55;
   --list-grey: #303539;
+  --box-size: 5.5vw;
 }
 
 * {
@@ -14,7 +15,6 @@ body {
   font-weight: 400;
   line-height: 1rem;
   color: black;
-  text-align: center;
   background-color: white;
 
   display: grid;
@@ -85,6 +85,7 @@ aside {
 .menu {
   background-color: var(--list-grey);
   padding: 1.2rem 0;
+  text-align: center;
   border-left: 0.3rem solid red;
   margin-bottom: 0.1rem;
 }
@@ -93,6 +94,29 @@ aside {
 
 main {
   grid-area: main;
+  padding: var(--box-size);
+
+  & h2 {
+    font-size: 2rem;
+    font-weight: 300;
+    margin-top: 0;
+    text-align: center;
+
+    &+p {
+      text-align: center;
+    }
+  }
+
+  & .flag {
+    border-top: 5px solid orange;
+
+    & span {
+      font-size: 1.3rem;
+      display: inline-block;
+      padding: 1.5rem;
+      background-color: yellow;
+    }
+  }
 }
 
 /* ----------------------------------------------------- */
