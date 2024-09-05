@@ -1,6 +1,7 @@
 :root {
   --menu-grey: #484f55;
   --list-grey: #303539;
+  --yellow: #db9c1e;
   --box-size: 5.5vw;
 }
 
@@ -108,13 +109,22 @@ main {
   }
 
   & .flag {
-    border-top: 5px solid orange;
+    border-top: 5px solid var(--yellow);
 
     & span {
       font-size: 1.3rem;
       display: inline-block;
       padding: 1.5rem;
-      background-color: yellow;
+      background-color: var(--yellow);
+      color: white;
+    }
+
+    &+.cards {
+      display: grid;
+      grid-template-areas:
+        "pic1 pic2 pic3"
+        "textarea textarea pic4";
+      grid-template-columns: repeat(3, 1fr);
     }
   }
 }
